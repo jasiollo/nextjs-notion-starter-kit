@@ -1,15 +1,21 @@
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
-  rootNotionPageId: '3e7cb3b4a87280598e6ef9c3df5e16c7', // np. 3e7cb3b4a87280598e6ef9c3df5e16c7
+  // the site's root Notion page (required)
+  rootNotionPageId: '3e7cb3b4a87280598e6ef9c3df5e16c7',
+
+  // if you want to restrict pages to a single notion workspace (optional)
   rootNotionSpaceId: null,
 
-  name: 'Barbara Mrowińska - Portfolio Taneczne',
-  domain: 'barbaramrowinska.pl', // Docelowa domena
+  // basic site info (required)
+  name: 'Portfolio taneczne Barbara Mrowińska',
+  domain: 'nextjs-notion-starter-kit-gilt-gamma.vercel.app', // <-- Wasza darmowa domena z Vercela
   author: 'Barbara Mrowińska',
-  description: 'Portfolio tancerki: Heels, Hip-hop, Eventy, Teatr.',
 
-  // Zerujemy domyślne sociale (usunie to ikony GitHuba, Twittera itp.)
+  // open graph metadata (optional)
+  description: 'Portfolio tancerki - Warszawa',
+
+  // social usernames (optional) - Wyzerowane
   twitter: null,
   github: null,
   linkedin: null,
@@ -21,13 +27,6 @@ export default siteConfig({
   isRedisEnabled: false,
   pageUrlOverrides: null,
 
-  // Włączamy własne menu i wklejamy ID utworzonych podstron
-  navigationStyle: 'custom',
-  navigationLinks: [
-    { title: 'Polaroidy', pageId: 'ID_PODSTRONY_POLAROIDY' },
-    { title: 'Heels', pageId: 'ID_PODSTRONY_HEELS' },
-    { title: 'Hip-hop', pageId: 'ID_PODSTRONY_HIPHOP' },
-    { title: 'Eventy & Teatr', pageId: 'ID_PODSTRONY_EVENTY_TEATR' },
-    { title: 'Muzyka', pageId: 'ID_PODSTRONY_MUZYKA' }
-  ]
+  // Menu - ustawione na default. Jeśli dziewczyna zrobi podstrony, zmienisz na 'custom' i dodasz linki.
+  navigationStyle: 'default' 
 })
