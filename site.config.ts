@@ -9,24 +9,28 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Portfolio taneczne Barbara Mrowińska',
-  domain: 'nextjs-notion-starter-kit-gilt-gamma.vercel.app', // <-- Wasza darmowa domena z Vercela
+  domain: 'nextjs-notion-starter-kit-gilt-gamma.vercel.app', 
   author: 'Barbara Mrowińska',
 
   // open graph metadata (optional)
   description: 'Portfolio tancerki - Warszawa',
 
-  // social usernames (optional) - Wyzerowane
-  twitter: null,
-  github: null,
-  linkedin: null,
+  // social usernames - KOMPLETNIE USUNIĘTE, ŻEBY TYPESCRIPT NIE KRZYCZAŁ
 
+  // default notion icon and cover images for site-wide consistency (optional)
   defaultPageIcon: null,
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
+
+  // whether or not to enable support for LQIP preview images (optional)
   isPreviewImageSupportEnabled: true,
+
+  // whether or not redis is enabled for caching generated preview images (optional)
   isRedisEnabled: false,
+
+  // map of notion page IDs to URL paths (optional)
   pageUrlOverrides: null,
 
-  // Menu - ustawione na default. Jeśli dziewczyna zrobi podstrony, zmienisz na 'custom' i dodasz linki.
-  navigationStyle: 'default' 
+  // whether to use the default notion navigation style
+  navigationStyle: 'default'
 })
