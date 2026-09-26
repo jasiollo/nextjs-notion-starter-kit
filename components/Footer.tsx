@@ -7,7 +7,7 @@ import { MoonIcon } from '@/lib/icons/moon'
 import { SunIcon } from '@/lib/icons/sun'
 import { TwitterIcon } from '@/lib/icons/twitter'
 import { useDarkMode } from '@/lib/use-dark-mode'
-
+import { FaInstagram, FaFacebook } from 'react-icons/fa'
 import styles from './styles.module.css'
 
 export function FooterImpl() {
@@ -43,6 +43,26 @@ export function FooterImpl() {
       </div>
 
       <div className={styles.social}>
+        {/* --- NOWE LINKI: INSTAGRAM I FACEBOOK --- */}
+        <a
+          href='https://www.instagram.com/TUTAJ_WPISZ_JEJ_NAZWE'
+          title='Instagram'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <FaInstagram size={24} />
+        </a>
+
+        <a
+          href='https://www.facebook.com/TUTAJ_WPISZ_JEJ_PROFIL'
+          title='Facebook'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <FaFacebook size={24} />
+        </a>
+        {/* ---------------------------------------- */}
+
         {config.twitter && (
           <a
             className={styles.twitter}
